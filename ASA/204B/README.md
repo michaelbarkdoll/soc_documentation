@@ -2,7 +2,7 @@
 
 ## Virtual Box
 
-### Windows 11 Image
+### Windows 11 Virtual Machine Image
 
 There is a public windows 11 virtual machine image available on this machine which can be run inside virtualbox.  The image provides end-users with administrative access using the built-in vagrant user account.  The default username and password of this account is 'vagrant'.  You can spin up this public virtual machine from your account with the following procedure:
 
