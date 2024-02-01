@@ -32,21 +32,12 @@ vagrant box add win11 F:\VMs\Win11\windows_11.box
 ==> box: Successfully added box 'win11' (v0) for ''!
 ```
 
-Copy our custom VagrantFile
+Copy our custom VagrantFile to our vagrant vm environment directory
 ```
 PS C:\Users\siu85xxxxxxx\VMs\Win11> cp F:\VMs\Win11\Vagrantfile C:\Users\siu85xxxxxxx\VMs\Win11\
 ```
 
-Initialize the new vagrant environment for the box name that we created 'win11'
-```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant init win11
-A `Vagrantfile` has been placed in this directory. You are now
-ready to `vagrant up` your first virtual environment! Please read
-the comments in the Vagrantfile as well as documentation on
-`vagrantup.com` for more information on using Vagrant.
-```
-
-Start the virtual machine
+Start the virtual machine from base box 'win11'
 ```powershell
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant up
 Bringing machine 'default' up with 'virtualbox' provider...
@@ -56,19 +47,20 @@ Progress: 20%
 ...
 Progress: 100%
 ==> default: Matching MAC address for NAT networking...
-==> default: Setting the name of the VM: Win11_default_1706820403037_28317
+==> default: Setting the name of the VM: Win11_default_1706821228142_9999
 ==> default: Clearing any previously set network interfaces...
 ==> default: Preparing network interfaces based on configuration...
     default: Adapter 1: nat
 ==> default: Forwarding ports...
+    default: 5985 (guest) => 55985 (host) (adapter 1)
+    default: 5986 (guest) => 55986 (host) (adapter 1)
     default: 22 (guest) => 2222 (host) (adapter 1)
 ==> default: Booting VM...
 ==> default: Waiting for machine to boot. This may take a few minutes...
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-    default: Warning: Connection reset. Retrying...
-    default: Warning: Connection aborted. Retrying...
+    default: WinRM address: 127.0.0.1:55985
+    default: WinRM username: vagrant
+    default: WinRM execution_time_limit: PT2H
+    default: WinRM transport: negotiate
 ```
 
 ### Vagrant box default admin credentials
@@ -76,9 +68,20 @@ Login to the computer with:
 username: vagrant
 password: vagrant
 
-### Remove a vagrant box
+### Shutdown VM
+```powershell
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant down
+```
 
-You may choose to spin up the vm again directly from virtualbox or with the `vagrant up` command from the directory you ran `vagrant init`.  When you're done using the VM and would like to delete it from the local computer you can following the following procedure.
+### Remove our Windows 11 vagrant box
+
+You may choose to spin up the vm again directly from virtualbox or with the `vagrant up` command from the directory that has the Vagrantfile (C:\Users\siu85xxxxxxx\VMs\Win11).  
+```powershell
+PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
+PS C:\Users\siu85xxxxxxx> vagrant up
+```
+
+When you're done using the VM and would like to delete it from the local computer you can following the following procedure.
 
 Make sure you change to the directory where you initially ran `vagrant init` to delete the vagrant virtual machine.
 
