@@ -21,15 +21,20 @@ PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
 Add the vagrant box to use vagrant installation:
 #vagrant box add <BOX_NAME> <PATH_TO_BOX_FILE>
 
-Here we'll add a box named "win11" from F:\VMs\Win11\windows11.box
+Here we'll add a box named "win11" from F:\VMs\Win11\windows_11.box
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 F:\VMs\Win11\windows11.box
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 F:\VMs\Win11\windows_11.box
 vagrant box add win11 F:\VMs\Win11\windows_11.box
 ==> box: Box file was not detected as metadata. Adding it directly...
 ==> box: Adding box 'win11' (v0) for provider:
     box: Unpacking necessary files from: file:///F:/VMs/Win11/windows_11.box
     box:
 ==> box: Successfully added box 'win11' (v0) for ''!
+```
+
+Copy our custom VagrantFile
+```
+PS C:\Users\siu85xxxxxxx\VMs\Win11> cp F:\VMs\Win11\Vagrantfile C:\Users\siu85xxxxxxx\VMs\Win11\
 ```
 
 Initialize the new vagrant environment for the box name that we created 'win11'
@@ -85,6 +90,9 @@ PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box remove win11
 Removing box 'win11' (v0) with provider 'virtualbox'...
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
 There are no installed boxes! Use `vagrant box add` to add some.
-PS C:\Users\siu85xxxxxxx\VMs\Win11>
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagant destroy
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Destroying VM and associated drives...
+PS C:\Users\siu85xxxxxxx\VMs\Win11> 
 ```
 
