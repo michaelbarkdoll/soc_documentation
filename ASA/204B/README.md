@@ -9,9 +9,9 @@ A public windows 11 virtual machine that provides end-users with administrative 
 - Open a new powershell and create a directory where you'd like you virtual machine to reside:
 
 ```powershell
-mkdir C:\Users\siu85xxxxxxx\VMs
-mkdir C:\Users\siu85xxxxxxx\VMs\Win11
-cd C:\Users\siu85xxxxxxx\VMs\Win11
+PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs
+PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs\Win11
+PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
 ```
 
 Add the vagrant box to use vagrant installation:
@@ -19,20 +19,20 @@ Add the vagrant box to use vagrant installation:
 
 Here we'll add a box named "win11" from F:\VMs\Win11\windows11.box
 ```powershell
-cd C:\Users\siu85xxxxxxx\VMs\Win11
-vagrant box add win11 F:\VMs\Win11\windows11.box
+PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 F:\VMs\Win11\windows11.box
 ```
 
 Initialize the new vagrant environment
 ```powershell
-cd C:\Users\siu85xxxxxxx\VMs\Win11
-vagrant init
+PS C:\Users\siu85xxxxxxx\VMs\Win11> cd C:\Users\siu85xxxxxxx\VMs\Win11
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant init
 ```
 
 Start the virtual machine
 ```powershell
-cd C:\Users\siu85xxxxxxx\VMs\Win11
-vagrant up
+PS C:\Users\siu85xxxxxxx\VMs\Win11> cd C:\Users\siu85xxxxxxx\VMs\Win11
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant up
 ```
 
 ### Vagrant box default admin credentials
@@ -53,6 +53,3 @@ There are no installed boxes! Use `vagrant box add` to add some.
 PS C:\Users\siu85xxxxxxx>
 ```
 
-Login to the computer with:
-username: vagrant
-password: vagrant
