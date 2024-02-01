@@ -24,6 +24,7 @@ Add the vagrant box to use vagrant installation:
 Here we'll add a box named "win11" from F:\VMs\Win11\windows_11.box if it previously doesn't exist on the machine.
 ```powershell
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
+There are no installed boxes! Use `vagrant box add` to add some.
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 F:\VMs\Win11\windows_11.box
 vagrant box add win11 F:\VMs\Win11\windows_11.box
 ==> box: Box file was not detected as metadata. Adding it directly...
