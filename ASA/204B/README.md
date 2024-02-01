@@ -69,10 +69,13 @@ Progress: 100%
 
 Open VirtualVox application and right click the assocated virtual machine and select access the running virtual machine.
 
-### Vagrant box default admin credentials
+#### Vagrant box default admin credentials
+
 Login to the computer with:
-username: vagrant
-password: vagrant
+
+**username: vagrant**
+
+**password: vagrant**
 
 ### Shutdown VM
 ```powershell
