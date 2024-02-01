@@ -8,7 +8,7 @@ A public windows 11 virtual machine that provides end-users with administrative 
 - Provide them the network path to the shared `.box` file.
 - Open a new powershell and create a directory where you'd like you virtual machine to reside:
 
-```powershell
+```shell
 PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs
 PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs\Win11
 PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
