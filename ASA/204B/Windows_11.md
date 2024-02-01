@@ -125,5 +125,7 @@ Replace <VM_NAME> with the name of the virtualmachine inside VirtualBox
 ```powershell
 PS C:\Users\siu85xxxxxxx> vagrant package --base Windows_11 --output C:\Users\siu85xxxxxxx\Boxes\windows_11.box
 ==> Windows_11: Exporting VM...
+==> Windows_11: Compressing package to: F:/VMs/Win11/windows_11.box
+PS F:\VMs\Win11>
 ```
 
