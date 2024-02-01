@@ -1,14 +1,15 @@
 # ASA 204 Lab Documentation
 
 ## Virtual Box
-A public windows 11 virtual machine that provides end-users with administrative access is available with the following procedure:
+There is a public windows 11 virtual machine image available on this machine which can be run inside virtualbox.  The image provides end-users with administrative access using the built-in vagrant user account.  The default username and password of this account is 'vagrant'.  You can spin up this public virtual machine from your account with the following procedure:
 
 ### Create a VM from a shared .box file
 
-- Provide them the network path to the shared `.box` file.
-- Open a new powershell and create a directory where you'd like you virtual machine to reside:
+- Open a new powershell and create a directory where you'd like your virtual machine to reside:
 
-```shell
+Replace siu85xxxxxxx with your siu851234567 number.
+
+```powershell
 PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs
 PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs\Win11
 PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
