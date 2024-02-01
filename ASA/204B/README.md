@@ -23,19 +23,16 @@ Add the vagrant box to use vagrant installation:
 
 Here we'll add a box named "win11" from F:\VMs\Win11\windows11.box
 ```powershell
-PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 F:\VMs\Win11\windows11.box
 ```
 
 Initialize the new vagrant environment
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> cd C:\Users\siu85xxxxxxx\VMs\Win11
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant init
 ```
 
 Start the virtual machine
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> cd C:\Users\siu85xxxxxxx\VMs\Win11
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant up
 ```
 
