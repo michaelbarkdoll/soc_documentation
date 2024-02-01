@@ -46,14 +46,18 @@ password: vagrant
 
 ### Remove a vagrant box
 
+You may choose to spin up the vm again directly from virtualbox or with the `vagrant up` command from the directory you ran `vagrant init`.  When you're done using the VM and would like to delete it from the local computer you can following the following procedure.
+
+Make sure you change to the directory where you initially ran `vagrant init` to delete the vagrant virtual machine.
+
 ```powershell
 PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
-PS C:\Users\siu85xxxxxxx> vagrant box list
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
 win11_test3 (virtualbox, 0)
-PS C:\Users\siu85xxxxxxx> vagrant box remove win11_test3
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box remove win11_test3
 Removing box 'win11_test3' (v0) with provider 'virtualbox'...
-PS C:\Users\siu85xxxxxxx> vagrant box list
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
 There are no installed boxes! Use `vagrant box add` to add some.
-PS C:\Users\siu85xxxxxxx>
+PS C:\Users\siu85xxxxxxx\VMs\Win11>
 ```
 
