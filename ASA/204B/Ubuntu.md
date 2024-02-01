@@ -19,7 +19,7 @@ mkdir UbuntuDesktopVagrant
 cd UbuntuDesktopVagrant
 ```
 
-3. **Initialize Vagrant with Ubuntu Box**: Run `vagrant init ubuntu/bionic64` to initialize a new Vagrantfile with the Ubuntu 18.04 LTS (Bionic Beaver) box. You can replace `bionic64` with another LTS version if you prefer, such as `focal64` for Ubuntu 20.04 LTS.
+3. **Initialize Vagrant with Ubuntu Box**: Run `vagrant init ubuntu/bionic64` to initialize a new Vagrantfile with the Ubuntu 18.04 LTS (Bionic Beaver) box. You can replace `bionic64` with another LTS version if you prefer, such as `focal64` for Ubuntu 20.04 LTS and 'jammy64' for Ubuntu 22.04 LTS.
 
 ```powershell
 vagrant init ubuntu/focal64
