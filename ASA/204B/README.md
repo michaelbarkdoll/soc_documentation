@@ -32,9 +32,9 @@ vagrant box add win11 F:\VMs\Win11\windows_11.box
 ==> box: Successfully added box 'win11' (v0) for ''!
 ```
 
-Initialize the new vagrant environment
+Initialize the new vagrant environment for the box name we created 'win11'
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant init
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant init win11
 ```
 
 Start the virtual machine
