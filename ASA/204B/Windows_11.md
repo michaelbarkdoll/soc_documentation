@@ -21,22 +21,22 @@ PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
 Add the vagrant box to use vagrant installation:
 #vagrant box add <BOX_NAME> <PATH_TO_BOX_FILE>
 
-Here we'll add a box named "win11" from F:\VMs\Win11\windows_11.box if it previously doesn't exist on the machine.
+Here we'll add a box named "win11" from C:\VMs\Win11\windows_11.box if it previously doesn't exist on the machine.
 ```powershell
 PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
 There are no installed boxes! Use `vagrant box add` to add some.
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 F:\VMs\Win11\windows_11.box
-vagrant box add win11 F:\VMs\Win11\windows_11.box
+PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 C:\VMs\Win11\windows_11.box
+vagrant box add win11 C:\VMs\Win11\windows_11.box
 ==> box: Box file was not detected as metadata. Adding it directly...
 ==> box: Adding box 'win11' (v0) for provider:
-    box: Unpacking necessary files from: file:///F:/VMs/Win11/windows_11.box
+    box: Unpacking necessary files from: file:///C:/VMs/Win11/windows_11.box
     box:
 ==> box: Successfully added box 'win11' (v0) for ''!
 ```
 
 Copy our custom VagrantFile to our vagrant vm environment directory
 ```
-PS C:\Users\siu85xxxxxxx\VMs\Win11> cp F:\VMs\Win11\Vagrantfile C:\Users\siu85xxxxxxx\VMs\Win11\
+PS C:\Users\siu85xxxxxxx\VMs\Win11> cp C:\VMs\Win11\Vagrantfile C:\Users\siu85xxxxxxx\VMs\Win11\
 ```
 
 Start the virtual machine from base box 'win11'
@@ -127,7 +127,7 @@ Replace <VM_NAME> with the name of the virtualmachine inside VirtualBox
 ```powershell
 PS C:\Users\siu85xxxxxxx> vagrant package --base Windows_11 --output C:\Users\siu85xxxxxxx\Boxes\windows_11.box
 ==> Windows_11: Exporting VM...
-==> Windows_11: Compressing package to: F:/VMs/Win11/windows_11.box
-PS F:\VMs\Win11>
+==> Windows_11: Compressing package to: C:/VMs/Win11/windows_11.box
+PS C:\VMs\Win11>
 ```
 
