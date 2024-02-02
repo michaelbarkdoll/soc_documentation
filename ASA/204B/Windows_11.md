@@ -123,7 +123,8 @@ There are no installed boxes! Use `vagrant box add` to add some.
 ### Create your own .box (optional for advanced users)
 
 Replace <VM_NAME> with the name of the virtualmachine inside VirtualBox
-#vagrant package --base <VM_NAME> --output windows_11.box
+
+vagrant package --base <VM_NAME> --output windows_11.box
 
 ```powershell
 PS C:\Users\siu85xxxxxxx> vagrant package --base Windows_11 --output C:\Users\siu85xxxxxxx\Boxes\windows_11.box
