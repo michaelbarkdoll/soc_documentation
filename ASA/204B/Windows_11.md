@@ -70,7 +70,7 @@ Progress: 100%
     default: /vagrant => C:/Users/siuadmin/VMs/Win11
 ```
 
-Open VirtualVox application and right click the assocated virtual machine and select access the running virtual machine.
+Open VirtualVox application should automatically show the running virtual machine GUI, but you can also right click the assocated virtual machine inside VirtualBox and select show to bring up a virtual machine's physical access GUI.
 
 #### Vagrant box default admin credentials
 
