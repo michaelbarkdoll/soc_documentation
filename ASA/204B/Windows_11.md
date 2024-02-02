@@ -18,8 +18,9 @@ PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs\Win11
 PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
 ```
 
-Add the vagrant box to use vagrant installation:
-#vagrant box add <BOX_NAME> <PATH_TO_BOX_FILE>
+Add the vagrant .box to your vagrant installation:
+
+vagrant box add <BOX_NAME> <PATH_TO_BOX_FILE>
 
 Here we'll add a box named "win11" from C:\VMs\Win11\windows_11.box if it previously doesn't exist on the machine.
 ```powershell
