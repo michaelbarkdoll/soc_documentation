@@ -1,0 +1,12 @@
+# Copy to ~/.codex/config.toml, then replace the model placeholder.
+# This requires a working OpenAI Responses-compatible /v1/responses route.
+model = "replace_with_model_id_from_v1_models"
+model_provider = "siu"
+model_context_window = 32768
+model_auto_compact_token_limit = 28000
+
+[model_providers.siu]
+name = "SIU AI"
+base_url = "https://api.cs.siu.edu/v1"
+env_key = "SIU_AI_KEY"
+wire_api = "responses"

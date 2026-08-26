@@ -1,0 +1,16 @@
+{
+  "name": "siu-ai-api-quickstart",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node quickstart.mjs",
+    "stream": "node streaming.mjs"
+  },
+  "dependencies": {
+    "openai": "7.5.0"
+  }
+}

@@ -1,0 +1,20 @@
+name: SIU AI
+version: 1.0.0
+schema: v1
+
+models:
+  - name: SIU Qwen 3.8 27B
+    provider: openai
+    model: replace_with_model_id_from_v1_models
+    apiBase: https://api.cs.siu.edu/v1
+    apiKey: "${{ secrets.SIU_AI_KEY }}"
+    roles:
+      - chat
+      - edit
+      - apply
+    useResponsesApi: false
+
+    # Add this only after the department confirms native tool calling works
+    # with the published model alias:
+    # capabilities:
+    #   - tool_use

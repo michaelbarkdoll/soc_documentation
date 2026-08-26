@@ -1,0 +1,16 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.cs.siu.edu",
+    "ANTHROPIC_MODEL": "replace_with_model_id_from_v1_models",
+    "ANTHROPIC_DEFAULT_MODEL": "replace_with_model_id_from_v1_models",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "replace_with_model_id_from_v1_models",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "replace_with_model_id_from_v1_models",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "replace_with_model_id_from_v1_models",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "replace_with_model_id_from_v1_models",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "replace_with_model_id_from_v1_models",
+    "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "32768",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "4096",
+    "CLAUDE_CODE_EFFORT_LEVEL": "medium"
+  }
+}

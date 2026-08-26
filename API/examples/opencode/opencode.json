@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "siu/replace_with_model_id_from_v1_models",
+  "provider": {
+    "siu": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "SIU AI",
+      "options": {
+        "baseURL": "https://api.cs.siu.edu/v1"
+      },
+      "models": {
+        "replace_with_model_id_from_v1_models": {
+          "name": "SIU Qwen 3.8 27B",
+          "limit": {
+            "context": 32768,
+            "output": 4096
+          }
+        }
+      }
+    }
+  }
+}

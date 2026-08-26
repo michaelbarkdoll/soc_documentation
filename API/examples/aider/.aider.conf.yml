@@ -1,0 +1,5 @@
+# The key intentionally does not appear in this file.
+model: openai/replace_with_model_id_from_v1_models
+openai-api-base: https://api.cs.siu.edu/v1
+timeout: 120
+stream: true

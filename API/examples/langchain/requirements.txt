@@ -1,0 +1,4 @@
+# Requires Python 3.10 or newer.
+langchain-openai>=1.0.0
+langgraph>=1.0.0
+typing-extensions>=4.0.0
