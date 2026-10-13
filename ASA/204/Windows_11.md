@@ -1,33 +1,56 @@
 # ASA 204 Lab Documentation
 
-## Virtual Box
+## VirtualBox
 
 ### Public Windows 11 Image
 
-There is a public windows 11 virtual machine image available on this machine which can be run inside virtualbox.  The image provides end-users with administrative access using the built-in vagrant user account.  The default username and password of this account is 'vagrant'.  You can spin up this public virtual machine from your account with the following procedure:
+There is a public Windows 11 virtual machine image available on this machine which can be run inside VirtualBox. The image provides end-users with administrative access using the built-in `vagrant` user account. The default username and password of this account is `vagrant`. You can spin up this public virtual machine from your account with the following procedure.
+
+Type or paste the commands shown under **Type in PowerShell**. Blocks labeled **Example output** show responses you may see; do not type them. PowerShell prompts are omitted from command blocks so you can copy the commands directly.
 
 ### Create a VM from a shared .box file
 
-- Open a new powershell and create a directory where you'd like your virtual machine to reside:
+Open a new PowerShell window and create a directory where you'd like your virtual machine to reside.
 
-Replace siu85xxxxxxx with your siu851234567 number.
+Replace `siu85xxxxxxx` in the commands below with your SIU account name, such as `siu851234567`.
+
+**Type in PowerShell:**
 
 ```powershell
-PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs
-PS C:\Users\siu85xxxxxxx> mkdir C:\Users\siu85xxxxxxx\VMs\Win11
-PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
+mkdir C:\Users\siu85xxxxxxx\VMs
+mkdir C:\Users\siu85xxxxxxx\VMs\Win11
+cd C:\Users\siu85xxxxxxx\VMs\Win11
 ```
 
-Add the vagrant .box to your vagrant installation:
+Add the Vagrant `.box` file to your Vagrant installation.
 
-vagrant box add <BOX_NAME> <PATH_TO_BOX_FILE>
+General syntax: `vagrant box add <BOX_NAME> <PATH_TO_BOX_FILE>`. Replace `<BOX_NAME>` with the name to assign to the box and `<PATH_TO_BOX_FILE>` with the path to the `.box` file.
 
-Here we'll add a box named "win11" from C:\VMs\Win11\windows_11.box if it previously doesn't exist on the machine.
+Here we'll add a box named `win11` from `C:\VMs\Win11\windows_11.box` if it is not already installed. First, check the installed boxes.
+
+**Type in PowerShell:**
+
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
+vagrant box list
+```
+
+**Example output (if no boxes are installed):**
+
+```text
 There are no installed boxes! Use `vagrant box add` to add some.
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box add win11 C:\VMs\Win11\windows_11.box
+```
+
+If `win11` is not listed, add it.
+
+**Type in PowerShell:**
+
+```powershell
 vagrant box add win11 C:\VMs\Win11\windows_11.box
+```
+
+**Example output:**
+
+```text
 ==> box: Box file was not detected as metadata. Adding it directly...
 ==> box: Adding box 'win11' (v0) for provider:
     box: Unpacking necessary files from: file:///C:/VMs/Win11/windows_11.box
@@ -35,14 +58,25 @@ vagrant box add win11 C:\VMs\Win11\windows_11.box
 ==> box: Successfully added box 'win11' (v0) for ''!
 ```
 
-Copy our custom VagrantFile to our vagrant vm environment directory
-```
-PS C:\Users\siu85xxxxxxx\VMs\Win11> cp C:\VMs\Win11\Vagrantfile C:\Users\siu85xxxxxxx\VMs\Win11\
+Copy our custom `Vagrantfile` to your VM directory. Replace `siu85xxxxxxx` with your SIU account name.
+
+**Type in PowerShell:**
+
+```powershell
+cp C:\VMs\Win11\Vagrantfile C:\Users\siu85xxxxxxx\VMs\Win11\
 ```
 
-Start the virtual machine from base box 'win11'
+Start the virtual machine from base box `win11`. Run this command from the VM directory you created above, which now contains the `Vagrantfile`.
+
+**Type in PowerShell:**
+
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant up
+vagrant up
+```
+
+**Example output:**
+
+```text
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Importing base box 'win11'...
 Progress: 10%
@@ -70,66 +104,125 @@ Progress: 100%
     default: /vagrant => C:/Users/siuadmin/VMs/Win11
 ```
 
-Open VirtualVox application should automatically show the running virtual machine GUI, but you can also right click the assocated virtual machine inside VirtualBox and select show to bring up a virtual machine's physical access GUI.
+The VirtualBox application should automatically show the running virtual machine GUI, but you can also right-click the associated virtual machine inside VirtualBox and select **Show** to open its console.
 
 #### Vagrant box default admin credentials
 
-Login to the computer with:
+Log in to the computer with:
 
-**username: vagrant**
+**Username:** `vagrant`
 
-**password: vagrant**
+**Password:** `vagrant`
 
 ### Shutdown VM
+
+Run this command from your VM directory, which contains the `Vagrantfile`.
+
+**Type in PowerShell:**
+
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant down
+vagrant halt
 ```
 
 ### Restarting the VM
 
-You may choose to spin up the vm again directly from virtualbox or with the `vagrant up` command from the directory that has the Vagrantfile (C:\Users\siu85xxxxxxx\VMs\Win11).  Alternatively, you can start the VM again from VirtualBox.
+You can start the VM again directly from VirtualBox or use `vagrant up` from the directory containing the `Vagrantfile`. Replace `siu85xxxxxxx` with your SIU account name.
+
+**Type in PowerShell:**
+
 ```powershell
-PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
-PS C:\Users\siu85xxxxxxx> vagrant up
+cd C:\Users\siu85xxxxxxx\VMs\Win11
+vagrant up
 ```
 
-### Remove Windows 11 virtual machine from virtual box
+### Remove Windows 11 virtual machine from VirtualBox
 
-When you're done using the VM you can optionally choose to delete the virtual machine from virtual box with the following procedure:
+When you're done using the VM, you can optionally choose to delete the virtual machine from VirtualBox with the following procedure.
 
-Make sure you change to the directory where your Vagrantfile associated with the virtual machine resides to delete the associated vagrant virtual machine.
+Change to the directory containing the `Vagrantfile` associated with the virtual machine you want to delete. Replace `siu85xxxxxxx` with your SIU account name.
+
+**Type in PowerShell:**
 
 ```powershell
-PS C:\Users\siu85xxxxxxx> cd C:\Users\siu85xxxxxxx\VMs\Win11
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagant destroy
-    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+cd C:\Users\siu85xxxxxxx\VMs\Win11
+vagrant destroy
+```
+
+**Example output (confirmation prompt):**
+
+```text
+    default: Are you sure you want to destroy the 'default' VM? [y/N]
+```
+
+To confirm deletion, type `y` and press **Enter**.
+
+**Example output (after confirmation):**
+
+```text
 ==> default: Destroying VM and associated drives...
-PS C:\Users\siu85xxxxxxx\VMs\Win11>
 ```
 
-If you don't plan on started a new fresh virtual machine from the 'win11' box you can delete the box entirely.
+If you don't plan on starting a fresh virtual machine from the `win11` box, you can delete the box entirely.
 
-### Delete the associated 'win11' box 
+### Delete the associated `win11` box
+
+List the installed boxes.
+
+**Type in PowerShell:**
+
 ```powershell
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
+vagrant box list
+```
+
+**Example output:**
+
+```text
 win11 (virtualbox, 0)
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box remove win11
+```
+
+Remove the `win11` box.
+
+**Type in PowerShell:**
+
+```powershell
+vagrant box remove win11
+```
+
+**Example output:**
+
+```text
 Removing box 'win11' (v0) with provider 'virtualbox'...
-PS C:\Users\siu85xxxxxxx\VMs\Win11> vagrant box list
+```
+
+List the boxes again to verify removal.
+
+**Type in PowerShell:**
+
+```powershell
+vagrant box list
+```
+
+**Example output (if no other boxes are installed):**
+
+```text
 There are no installed boxes! Use `vagrant box add` to add some.
 ```
 
+### Create your own `.box` (optional for advanced users)
 
-### Create your own .box (optional for advanced users)
+General syntax: `vagrant package --base <VM_NAME> --output windows_11.box`. Replace `<VM_NAME>` with the name of the virtual machine inside VirtualBox.
 
-Replace <VM_NAME> with the name of the virtualmachine inside VirtualBox
+For example, to package a VM named `Windows_11`, use the command below. Replace `siu85xxxxxxx` with your SIU account name.
 
-vagrant package --base <VM_NAME> --output windows_11.box
+**Type in PowerShell:**
 
 ```powershell
-PS C:\Users\siu85xxxxxxx> vagrant package --base Windows_11 --output C:\Users\siu85xxxxxxx\Boxes\windows_11.box
-==> Windows_11: Exporting VM...
-==> Windows_11: Compressing package to: C:/VMs/Win11/windows_11.box
-PS C:\VMs\Win11>
+vagrant package --base Windows_11 --output C:\Users\siu85xxxxxxx\Boxes\windows_11.box
 ```
 
+**Example output:**
+
+```text
+==> Windows_11: Exporting VM...
+==> Windows_11: Compressing package to: C:/Users/siu85xxxxxxx/Boxes/windows_11.box
+```
